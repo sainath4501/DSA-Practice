@@ -3,7 +3,7 @@ public class TrappedWater {
     public static int TrappeedWater(int height[]){
         int n=height.length;
 
-        //Calculate leftMax
+        //To Calculate-MaxLeft Array 
         int leftMax[]=new int[n];
         leftMax[0]=height[0];
 
@@ -11,7 +11,7 @@ public class TrappedWater {
             leftMax[i]=Math.max(height[i], leftMax[i-1]);
         }
 
-        // Calculate rightMax
+        //To Calculate-MaxRight Array
         int rightMax[]=new int[n];
         rightMax[n-1]=height[n-1];
 
@@ -19,18 +19,17 @@ public class TrappedWater {
             rightMax[i]=Math.max(height[i], rightMax[i+1]);
         }
 
-        int trappesdWater=0;
+        int trappedwater=0;
 
         //loop
+
         for(int i=0;i<n;i++){
+            int waterlevel=Math.min(leftMax[i], rightMax[i]);
 
-            //Calculate Water level
-            int waterLevel=Math.min(leftMax[i],rightMax[i]);
-
-            //Calculate water Level
-            trappesdWater+=waterLevel-height[i];
+            trappedwater+=waterlevel-height[i];
         }
-        return trappesdWater;
+        
+        return trappedwater;
 
     }
 
