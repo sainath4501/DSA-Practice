@@ -10,10 +10,10 @@ public class SearchInSortMatrix {
                 System.out.print("Element found at : ("+row+","+col+")");
                 return true;
             }
-            else if(key<matrix[row][col]){
-                col--;
-            }else{
+            else if(key>matrix[row][col]){
                 row++;
+            }else{
+                col--;
             }
         }
         System.out.println("Element not found...!");
