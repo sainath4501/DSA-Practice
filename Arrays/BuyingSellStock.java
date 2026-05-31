@@ -1,24 +1,25 @@
 public class BuyingSellStock {
 
-    public static int buyingselling(int Price[]){
-        int buyingPrice=Integer.MAX_VALUE;
-        int maxProfit=0;
+        public static int BuySell(int price[]){
+            int buyPrice=Integer.MAX_VALUE;
+            int maxProfit=0;
 
-        for(int i=0;i<Price.length;i++){
-            if(buyingPrice<Price[i]){
-                int profit=Price[i]-buyingPrice;
-                maxProfit=Math.max(maxProfit, profit);
-            }else{
-                buyingPrice=Price[i];
+            for(int i=0;i<price.length;i++){
+                if(buyPrice<price[i]){
+                    int profit=price[i]-buyPrice;
+                    maxProfit=Math.max(maxProfit, profit);
+                }else{
+                    buyPrice=price[i];
+                }
             }
+            return maxProfit;
         }
-        return maxProfit;
-    }
+
 
     public static void main(String args[]){
         int Price[]={7,1,5,3,6,4};
-        int Stock=buyingselling(Price);
-        System.out.println("Hihest Prifit day is:"+Stock);
+        int Stock=BuySell(Price);
+        System.out.println("Hihest Profit day is:"+Stock);
 
     }
 }

@@ -9,13 +9,15 @@ public class StringCompression {
                 count++;
                 i++;
             }
-            newStr+=str.charAt(i);
-
+        
             if(count>1){
                 newStr+=count.toString();
             }
+            newStr+=str.charAt(i);
+            
+        
         }
-        return  newStr;
+        return newStr;
 
 
     }
