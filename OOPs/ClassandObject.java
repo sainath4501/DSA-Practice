@@ -1,17 +1,27 @@
-public class ClassandObject {
+public class ClassandObject{
 
-    public static void main(String args[]){
+    public static void main(String asrgs[]){
         Pen p1=new Pen();
-        p1.setColor("Black");
-        System.out.println(p1.Color);    
+        p1.setColor("Pink");
+        p1.setTip(50);
+        System.out.println(p1.color);
+        System.out.println(p1.tip);
+        
     }
 }
 
 class Pen{
-    String Color;
-    int Tip;
+
+    int tip;
+    String color;
 
     void setColor(String newColor){
-        Color=newColor;
+        color = newColor;
     }
+
+    void setTip(int newTip) {
+        tip = newTip;
+    }
+
+
 }

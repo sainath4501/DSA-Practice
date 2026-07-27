@@ -1,31 +1,28 @@
 public class getter {
-
     public static void main(String args[]){
-        Pen p1=new Pen();
-        p1.setColor("black");
-        p1.setTip(5);
-        System.out.println(p1.getColor());
-        System.out.println(p1.getTip());
-    }
+        Pen p=new Pen();
+        p.setTip(50);
+        p.setColor("Pink");
+        System.out.println(p.getTip());
+        System.out.println(p.getColor());
+    }   
 }
-
 class Pen{
+    private int tip;
     private String Color;
-    private int Tip;
 
+    void setTip(int newTip){
+        tip=newTip;
+
+    }
     void setColor(String newColor){
         Color=newColor;
     }
 
-    void setTip(int newTip){
-        Tip=newTip;
+    int getTip(){
+        return this.tip;
     }
-
     String getColor(){
         return this.Color;
-    }
-
-    int getTip(){
-        return this.Tip;
     }
 }
