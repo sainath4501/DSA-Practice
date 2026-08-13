@@ -1,10 +1,10 @@
 public class HybridInheritance {
-        
-    public class MultiLevelInheritance {
-
     public static void main(String args[]){
         BMW m1=new BMW();
         m1.Work();
+
+        MGCars m2=new MGCars();
+        m2.Work();
     }
     
     static class vehical{
@@ -32,4 +32,4 @@ public class HybridInheritance {
     }
 }    
 
-}
+

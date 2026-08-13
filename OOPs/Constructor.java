@@ -1,22 +1,28 @@
 public class Constructor{
     public static void main(String args[]){
-        Student s=new Student("Sainathh");
-        System.out.println(s.name);
+        Student s1=new Student("Sainth");
+        System.out.println(s1.Name);
+        
     }
 }
 
 class Student{
     
+    String Name;
     int RollNo;
-    String name;
-    Student(String newname){
-        this.name=newname;
+    
+    Student(String newName){
+        this.Name=newName;
     }
-    Student(){
-        System.out.println("Sainath.....");
-        
-        
 
+    Student(int newRollno){
+        this.RollNo=newRollno;
     }
+
+
+
+    // Student(){
+        // System.out.println("Sainath.....");
+           
     
 }

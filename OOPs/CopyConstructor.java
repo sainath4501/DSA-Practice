@@ -31,12 +31,11 @@ class Student{
         marks=new int[3];
         System.out.println("I am a student of PES University");
     }
-
     Student(Student s1){
-        marks=new int[3];
         this.Name=s1.Name;
         this.Roll_no=s1.Roll_no;
-        this.marks=s1.marks;
+        this.marks=s1.marks.clone();
+    
     }
 
     Student(int newROLLNo){

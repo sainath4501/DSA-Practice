@@ -4,7 +4,8 @@ public class AccessModifer{
         b.Username="Sainath";
         // b.password="adkask";  bcz it is private access modifier
         System.out.println(b.Username);
-        b.setPassword("manish");
+        b.setPassword("Sainath");
+    
         
     }
 }
@@ -15,6 +16,5 @@ class BankAccount{
 
     public void setPassword(String newPass){
         password=newPass;
-        
     }
 }

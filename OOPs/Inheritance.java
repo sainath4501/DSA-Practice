@@ -1,22 +1,23 @@
-public class Inheritance {
-    
+public class Inheritance{
     public static void main(String args[]){
-        cat c1=new cat();
-        c1.eat();
+        Animal a1=new Animal();
+        Dog d1=new Dog();
+        d1.eat();
     }
+}
 
-    static class Animal{
-        String Color;
-        void eat(){
-            System.out.println("Eat's");
-        }
+class Animal{
+    String Color;
+
+    void eat(){
+        System.out.println("Animal eat a food");
     }
+}
+class Dog extends Animal{
+    String Sound;
 
-    static class cat extends Animal{
-        int leg;
-        void speak(){
-            System.out.println("Bow");
-        }
+    void setSound(){
+        System.out.println("Bow...");
     }
 }
 
