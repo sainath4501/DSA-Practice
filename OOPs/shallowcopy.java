@@ -1,23 +1,19 @@
 import java.util.Arrays;
-public class deep {
+public class shallowcopy {
 
     public static void main(String[] args) {
         int []marks={10,30,50,70,90,60};
         Student s1=new Student(marks, "Sainath");
 
-        //deepCopy
-        Student s2=new Student(
-            s1.marks.clone(),
-            s1.Name
-            
-        );
+        //shallowCopy
+        Student s2=new Student(s1.marks,s1.Name);
         s2.marks[2]=79;
 
         System.out.println(Arrays.toString(s1.marks));
         System.out.println(Arrays.toString(s2.marks));
     }
     static class Student{
-        int[] marks;
+        int []marks;
         String Name;
 
         Student(int []marks,String Name){
@@ -29,4 +25,3 @@ public class deep {
 
 
 }
-
