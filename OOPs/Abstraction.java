@@ -16,7 +16,7 @@ abstract class animal{
     animal(){
         color="brown";
     }
-   abstract void walk();
+    abstract void walk();
 
 }
 
