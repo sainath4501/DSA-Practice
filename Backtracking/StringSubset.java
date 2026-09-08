@@ -1,25 +1,26 @@
 public class StringSubset {
+    public static void Subset(String str,String newstr,int i){
 
-    public static void SubSet(String str, String val,int i ){
-
+        //Base Case
         if(i==str.length()){
-            if(val.length()==0){
-                System.out.println("Null");
+            if(newstr.length()==0){
+                System.out.println("null");
             }else{
-                System.out.println(val);
+                System.out.print(newstr+" ");
             }
             return;
         }
-        // if yes
-        SubSet(str, val+str.charAt(i), i+1);
 
-        // if no
-        SubSet(str, val, i+1);
+        //if Yes
+        Subset(str, newstr+str.charAt(i), i+1);
+
+        //if No
+        Subset(str, newstr, i+1);
+
+
     }
-
     public static void main(String[] args) {
-        String str="abc";
-        SubSet(str, " ", 0);
+        String str="ABC";
+        Subset(str, "", 0);
     }
-    
 }
