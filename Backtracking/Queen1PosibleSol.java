@@ -1,19 +1,21 @@
-public class Queen4 {
+public class Queen1PosibleSol {
 
-    public static void nQueen(char Board[][],int row){
+    public static boolean nQueen(char Board[][],int row){
         if(row==Board.length){
             printBoard(Board);
-            count++;
-            return;
+            return true;
         }
 
         for(int j=0;j<Board.length;j++){
            if(isSafe(Board, row, j)){
             Board[row][j]='Q';
-            nQueen(Board, row+1);
+            if(nQueen(Board, row+1)){
+                return true;
+            }
             Board[row][j]='X';
            }
         }
+        return false;
     }
 
     public static boolean isSafe(char Board[][],int row,int col){
@@ -49,7 +51,7 @@ public class Queen4 {
     }
 
     public static void main(String[] args) {
-        int n=4;
+        int n=2;
         char Board[][]=new char[n][n];
 
         for(int i=0;i<n;i++){
@@ -57,8 +59,12 @@ public class Queen4 {
                 Board[i][j]='X';
             }
         }
-        nQueen(Board, 0);
-        printBoard(Board);
+        if(nQueen(Board, 0)){
+            System.out.println("Possible solution is: ");
+            printBoard(Board);
+        }else{
+            System.out.println("There is no Possible Solution.....!");
+        }
         System.out.println("Total no-of ways to print the solution is: "+count);
     }
 }

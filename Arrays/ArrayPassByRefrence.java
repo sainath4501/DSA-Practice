@@ -1,18 +1,20 @@
 public class ArrayPassByRefrence {
 
-    public static void PassByRefrence(int number[]){
-        for(int i=0;i<number.length;i++){
-            number[i]=number[i]*10;
+    public static void PassByRefrence(int marks[]){
+        for(int i=0;i<marks.length;i++){
+            marks[i]=marks[i] * 10;
         }
     }
 
-    public static void main(String args[]){
-        int number[]={10,20,30,40,60,70,80,90,100};
-        PassByRefrence(number);
+    public static void main(String[] args) {
+        int marks[]={10,20,30,40,50,60};
 
-        //printing
-        for(int i=0;i<number.length;i++){
-            System.out.print(number[i]+" ");
+        PassByRefrence( marks);
+
+        //print
+
+        for(int i=0;i<marks.length;i++){
+            System.out.print(marks[i]+" ");
         }
         System.out.println();
     }

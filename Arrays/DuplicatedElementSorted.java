@@ -1,6 +1,6 @@
 public class DuplicatedElementSorted {
-    
-    public static int Duplicate(int arr[]){
-        
+
+    public static void main(String args[]){
+        int marks[]=new int[3];
     }
 }

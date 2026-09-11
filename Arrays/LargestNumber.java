@@ -1,32 +1,28 @@
 public class LargestNumber {
 
-    public static int LargestNo(int number[]){
-        int Largest=Integer.MIN_VALUE;
+    public static int Largest(int number[]){
+        int Large=Integer.MIN_VALUE;
         for(int i=0;i<number.length;i++){
-            if(Largest<number[i]){
-                Largest=number[i];
+            if(Large<number[i]){
+                Large=number[i];
             }
         }
-        return Largest;
+        return Large;
     }
 
-     public static int SmallestNo(int number[]){
-        int Smallest=Integer.MAX_VALUE;
+    public static int Smallest(int number[]){
+        int Small=Integer.MAX_VALUE;
         for(int i=0;i<number.length;i++){
-            if(Smallest>number[i]){
-                Smallest=number[i];
+            if(Small>number[i]){
+                Small=number[i];
             }
         }
-        return Smallest;
+        return Small;
     }
 
     public static void main(String args[]){
-        int number[]={10,20,30,40,50,60};
-
-        int Largest=LargestNo(number);
-        int Smallest=SmallestNo(number);
-        System.out.println("Smallest Number is :"+Smallest);
-        System.out.print("Largest Number is :"+Largest);
-
+        int number[]={10,20,40,90,20,35};
+        System.out.println(Largest(number));
+        System.out.println(Smallest(number));
     }
 }
