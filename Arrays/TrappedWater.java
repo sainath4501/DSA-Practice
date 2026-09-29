@@ -1,42 +1,37 @@
 public class TrappedWater {
 
-    public static int TrappeedWater(int height[]){
+    public static int trappedwater(int height[]){
+
         int n=height.length;
+        
+        int left[]=new int[n];
+        left[0]=height[0];
 
-        //To Calculate-MaxLeft Array 
-        int leftMax[]=new int[n];
-        leftMax[0]=height[0];
-
+        //calculate left max boundry
         for(int i=1;i<n;i++){
-            leftMax[i]=Math.max(height[i], leftMax[i-1]);
+            left[i]=Math.max(height[i], left[i-1]);
         }
 
-        //To Calculate-MaxRight Array
-        int rightMax[]=new int[n];
-        rightMax[n-1]=height[n-1];
+        int right[]=new int[n];
+        right[n-1]=height[n-1];
 
+        //calculate rigth max boundry
         for(int i=n-2;i>=0;i--){
-            rightMax[i]=Math.max(height[i], rightMax[i+1]);
+            right[i]=Math.max(height[i], right[i+1]);
         }
 
-        int trappedwater=0;
-
-        //loop
+        int trappedWater=0;
 
         for(int i=0;i<n;i++){
-            int waterlevel=Math.min(leftMax[i], rightMax[i]);
-
-            trappedwater+=waterlevel-height[i];
+            int waterLevel=Math.min(left[i], right[i]);
+            trappedWater+=waterLevel - height[i];
         }
-        
-        return trappedwater;
-
+        return trappedWater;
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args) {
         int height[]={4,2,0,6,3,2,5};
-        int TRPW=TrappeedWater(height);
-        System.out.println("Traped water is :"+TRPW);
-
+        int TRPW=trappedwater(height);
+        System.out.print("Traped Water is: "+TRPW);
     }
 }

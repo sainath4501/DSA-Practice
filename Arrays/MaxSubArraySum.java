@@ -1,27 +1,26 @@
 public class MaxSubArraySum {
-
-    public static void MSAS(int number[]){
-        int Largest=Integer.MIN_VALUE;
-        int currSum=0;
+    
+    public static void max(int number[]){
+        int tms=0;
+        int MaxSum=Integer.MIN_VALUE;
         for(int i=0;i<number.length;i++){
-           
             for(int j=i;j<number.length;j++){
-                currSum=0;
+                int curSum=0;
                 for(int k=i;k<=j;k++){
-                    currSum+=number[k];
+                    curSum+=number[k];
                 }
-                System.out.print(currSum);
-                if(Largest<currSum){
-                    Largest=currSum;
+                tms++;
+                System.out.print(curSum+" ");
+                if(MaxSum < curSum){
+                    MaxSum=curSum;
                 }
             }
             System.out.println();
         }
-        System.out.println("Largest Number is :"+Largest);
+        System.out.println("Max sum is: "+MaxSum);
     }
-
-    public static void main(String args[]){
+    public static void main(String[] args) {
         int number[]={1,-2,6,-1,3};
-        MSAS(number);
+        max(number);
     }
 }

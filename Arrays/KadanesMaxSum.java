@@ -1,21 +1,20 @@
 public class KadanesMaxSum {
 
-    public static void Kadanes(int number[]){
+    public static void kadans(int number[]){
         int MaxSum=0;
-        int currSum=0;
+        int curSum=0;
         for(int i=0;i<number.length;i++){
-            currSum=currSum+number[i];
-            if(currSum < 0){
-                currSum=0;
+            curSum+=number[i];
+            if(curSum < 0){
+                curSum=0;
             }
-            MaxSum=Math.max(MaxSum, currSum);
+            MaxSum=Math.max(MaxSum, curSum);
         }
-        System.out.println("Max Sum is:"+MaxSum);
+        System.out.println("Max sum is "+MaxSum);
     }
-    public static void main(String args[]){
-        int number[]={-2,-3,4,-1,-2,1,5};
-        Kadanes(number);
 
+    public static void main(String[] args) {
+        int number[]={1,-2,6,-1,3};
+        kadans(number);
     }
-    
 }

@@ -1,20 +1,24 @@
 public class SubArray {
 
-    public static void SubA(int number[]){
+    public static void subarray(int number[]){
+        int count=0;
         for(int i=0;i<number.length;i++){
-            for(int j=i;j<number.length;j++){
-                for(int k=i;k<=j;k++){
+            int start=i;
+            for(int j=0;j<number.length;j++){
+                int end=j;
+                for(int k=start;k<=end;k++){
                     System.out.print(number[k]+" ");
                 }
+                count++;
                 System.out.println();
             }
-            System.out.println();
         }
-        System.out.println();
+        
+        System.out.println(count);
     }
 
-    public static void main(String args[]){
-        int number[]={10,20,30,40,50,60,70,80};
-        SubA(number);
+    public static void main(String[] args) {
+        int number[]={2,4,6,8,10};
+        subarray(number);
     }
 }
