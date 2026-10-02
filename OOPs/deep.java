@@ -6,11 +6,7 @@ public class deep {
         Student s1=new Student(marks, "Sainath");
 
         //deepCopy
-        Student s2=new Student(
-            s1.marks.clone(),
-            s1.Name
-            
-        );
+        Student s2=new Student(s1.marks.clone(),s1.Name);
         s2.marks[2]=79;
 
         System.out.println(Arrays.toString(s1.marks));

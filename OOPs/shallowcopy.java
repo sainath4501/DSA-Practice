@@ -7,9 +7,10 @@ public class shallowcopy {
 
         //shallowCopy
         Student s2=new Student(s1.marks,s1.Name);
-        s2.marks[2]=79;
+        
 
         System.out.println(Arrays.toString(s1.marks));
+        s2.marks[2]=79;
         System.out.println(Arrays.toString(s2.marks));
     }
     static class Student{

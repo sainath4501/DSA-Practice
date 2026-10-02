@@ -9,7 +9,7 @@ public class Interface{
     }
 }
 
-interface ChessPlayer{
+interface ChessPlayer{  
 
     void move();
 }
