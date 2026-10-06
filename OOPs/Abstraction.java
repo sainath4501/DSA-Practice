@@ -5,7 +5,7 @@ public class Abstraction {
         c1.eat();
         System.out.println(c1.color);
     }
-}
+} 
 
 abstract class animal{
 
