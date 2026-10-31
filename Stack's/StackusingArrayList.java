@@ -1,43 +1,45 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class StackusingArrayList {
 
-    static public class Stack{
-        static ArrayList<Integer>list=new ArrayList<>();
+    static ArrayList<Integer> list=new ArrayList<>();
 
-        //isEmpty to check
-        public static boolean isEmpty(){
-            return list.size()==0;
-        }
-
-        //add
-        public static void push(int data){
-            list.add(data);
-        }
-
-        //remove
-        public static int pop(){
-            int val=list.get(list.size()-1);
-            list.remove(list.size()-1);
-            return val;
-        }
-
-        //peek
-        public static int peek(){
-            int val=list.get(list.size()-1);
-            return val;
-        }
+    public static boolean isEmpty(){
+        return list.size()==0;
     }
+
+    public static void push(int data){
+        list.add(data);
+        return ;
+    }
+
+    public static int  pop(){
+        if(isEmpty()){
+            return -1;
+        }
+        int top=list.get(list.size()-1);
+        list.remove(list.size()-1);
+        return top;
+    }
+
+    public static int peek(){
+        if(isEmpty()){
+            return -1;
+        }
+        int top=list.get(list.size()-1);
+        return top;
+    }
+
     public static void main(String[] args) {
-        Stack s=new Stack();
-        s.push(1);
-        s.push(2);
-        s.push(3);
+        Stack s=new Stack<>();
+        s.add(1);
+        s.add(2);
+        s.add(3);
+        s.add(4);
 
         while (!s.isEmpty()) {
             System.out.println(s.peek());
             s.pop();
-            
         }
     }
 }

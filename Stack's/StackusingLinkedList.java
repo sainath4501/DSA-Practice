@@ -1,8 +1,7 @@
-import java.util.ArrayList;
-
+import java.util.*;
 public class StackusingLinkedList {
 
-    static class Node{
+    static public class Node{
         int data;
         Node next;
 
@@ -12,18 +11,16 @@ public class StackusingLinkedList {
         }
     }
 
-    static class Stack{
-        static Node head=null;
+    static public class Stack{
+        static Node head = null;
 
         public static boolean isEmpty(){
             return head==null;
         }
 
-        
-
-        //add
         public static void push(int data){
             Node newNode=new Node(data);
+
             if(isEmpty()){
                 head=newNode;
                 return ;
@@ -33,7 +30,6 @@ public class StackusingLinkedList {
             return ;
         }
 
-        //remove
         public static int pop(){
             if (isEmpty()) {
                 return -1;
@@ -43,22 +39,21 @@ public class StackusingLinkedList {
             return top;
         }
 
-        //peek
         public static int peek(){
-            if (isEmpty()) {
+            if(isEmpty()){
                 return -1;
             }
             int top=head.data;
             return top;
         }
     }
-    
-        
+
     public static void main(String[] args) {
         Stack s=new Stack();
         s.push(1);
         s.push(2);
         s.push(3);
+        s.push(4);
 
         while (!s.isEmpty()) {
             System.out.println(s.peek());
